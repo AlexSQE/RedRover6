@@ -1,0 +1,33 @@
+let arrBrackets = ['}','{', '(', '(', ')', ')', '}', '[', ']'];
+let arrCompare = [];
+
+for(let i = 0; i < arrBrackets.length; i++){
+    if(arrBrackets[i] == '(' || arrBrackets[i] == '{' || arrBrackets[i] == '['){
+      arrCompare.push(arrBrackets[i]); 
+    } else {
+        if (arrCompare.length == 0){
+            console.log('Wrong sequence');
+            break;
+        }
+        let bracket = arrCompare.pop()
+        if (arrBrackets[i] == '}' && bracket != '{'){
+            console.log('Wrong sequence');
+            break;
+        }
+        if (arrBrackets[i] == '(' && bracket != '('){
+            console.log('Wrong sequence');
+            break;
+        }
+        if (arrBrackets[i] == '[' && bracket != '['){
+            console.log('Wrong sequence');
+            break;
+        }
+    }
+}
+if (arrCompare.length == 0) {
+    console.log('Good sequence!');
+} else {
+    console.log('Wrong sequence');
+
+}
+
