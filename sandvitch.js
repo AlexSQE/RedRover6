@@ -23,8 +23,8 @@ while(ask != "yes"){
 let askToppings = prompt('Choose from bellow topings: turkey - 1, salami - 2; salmon -3')
 
 if (askTopping == 1){
-    topping = turkey
-    sandwich = turkeySandwich
+    topping = turkey;
+    sandwich = turkeySandwich;
 }
 else if (askTopping == 3){
     topping = salami
