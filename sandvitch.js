@@ -9,8 +9,8 @@ let salmon = "Wild salmon";
 // fresh salad
 // soys ranch
 let salami = "salami";
-let prompt;
-let ask;
+let prompt
+let ask
 
 let turkeySandwich = "sandwich with turkey";
 let salamiSandwich = "sandwich with salami";
