@@ -1,85 +1,32 @@
-// let str = 'Live k k ';
-
-// let str1 = str.toLowerCase().split('').reverse().join('').replaceAll(' ','');
-
-// console.log(str1);
-
-
-// if(str.toLowerCase().replaceAll(' ','') === str1) {
-//     console.log('true')
-// } else {
-// console.log('false')    
-// }
-
-// console.log(str1);
-
-// let arr = [1, 2, 3]
-// console.log(arr.reverse())
-
-// function fib(n){
-//    if(n == 0) return 0;
-//    if(n == 1) return 1;
-//    return fib(n-1) + fib(n-2); 
-// }
-
-// console.log(fib(8))
-
-// function generate(seed) {
-//     var private = seed;
-//     return function (param) {
-//       private += seed;
-//       return private + param;
-//     };
-//   }
-  
-//   var a = generate(1);
-//   var b = generate(2);
-
-//   console.log(a(1) + a(2) + b(3) + b(4))
-
-// const arrey = [4, 6, 8, 9, 12, 53, -17, 2, 5, 7, 31, 97, -1, 17];
-// // vernut prostye cifry v massive
-// function isPrime(num) {
-//   for(let i = 2; num > i; i++) {
-//     if (num % i == 0) {
-//         return false;
-//     }
-//   }
-//   return num > 1;
-// }
-
-// console.log(arrey.filter(isPrime));
-
-
-function pow(x, n) {
-    if (n == 1) {
-      return x;
-    } else {
-      return x * pow(x, n - 1);
-    }
-  }
-
-  console.log(pow(2,3));
-
-// Dmitry
+// Alex
   function isPallindrom (phrase) {
-    phrase = phrase.split(':',',','-', ' ').join('').toLowerCase().replace(/\s/g,'');  // удаленіе всех пробелов
-    let arr1 = phrase.split('');
-    arr1.reverse();
-    //return phrase;
-
-    //let a = arr1.join('').toLowerCase().replaceAll(',').replace(/\s/g,''); 
-    //let b = arr1.reverse().join('').toLowerCase().replaceAll(',').replace(/\s/g,'');
-     //a = a.replace(/\s/g,'');
-     //b = b.replace(/\s/g,'');
-    // let re = /\s*;\s*/;
-    // let nameList = a.split(re);
-      //a = a.split(',').join('');
-      //b = b.split(',').join('');
-  console.log(phrase);
-    //console.log(a);
-    //console.log(b);
-return arr1.join() === arr1.reverse().join(); 
+    phrase = phrase.toLowerCase().replace(/\W/g,'');
+    return phrase === phrase.split('').reverse().join(''); 
 
 }
 console.log(isPallindrom ("A man, a plan, a canal: Panama"));
+
+//С проверкой на пустую строку
+function isPalindrome2(phrase) {
+  let cleanedPhrase = phrase.replace(/[^a-z0-9]/gi, '').toLowerCase();
+  if (cleanedPhrase.length === 0) {
+    return false;
+  }
+  return cleanedPhrase === cleanedPhrase.split('').reverse().join('');
+}
+console.log(isPalindrome2("A man, a plan, a canal: Panama"));
+
+/* В данном случае мы используем \p{L} для сопоставления с любыми буквенными символами
+(включая кириллические), и \p{N} для сопоставления с любыми цифрами. 
+Опция u в конце регулярного выражения указывает на использование юникодных символов.
+*/
+
+function isPalindrome(phrase) {
+  let cleanedPhrase = phrase.replace(/[^\p{L}\p{N}]/gu, '').toLowerCase();
+  if (cleanedPhrase.length === 0) {
+    return false;
+  }
+  return cleanedPhrase === cleanedPhrase.split('').reverse().join('');
+}
+
+console.log(isPalindrome('A man, a plan, a canal: Panama')); // true
