@@ -103,5 +103,65 @@ addIngredient(meat1);
 // Выводим в консоль результат
 print()
 
- 
-  
+// //Marina 
+// const chickenSandwich = {
+//   name: "Sandwich with chicken",
+//   bread: "whole wheat",
+//   cheese: "american",
+//   salad: "fresh salad",
+//   meat: "chicken",
+// };
+// const tunaSandwich = {
+//   name: "Sandwich with tuna",
+//   bread: "whole wheat",
+//   cheese: "american",
+//   salad: "fresh salad",
+//   meat: "tuna",
+// };
+// const glutenFreeSandwich = {
+//   name: "Gluten free sandwich",
+//   bread: "gluten free",
+//   cheese: "vegan",
+//   salad: "fresh salad",
+//   meat: "gluten free",
+// };
+// const sandwichName = {
+//   chicken: "Sandwich with chicken",
+//   tuna: "Sandwich with tuna",
+//   "gluten free": "Sandwich gluten free",
+// };
+// function chooseIngredients(meat) {
+//   console.log(`Here are ingredients for your:  ${sandwichName[meat]}\n`);
+//   if (meat == "chicken") {
+//     for (let el in chickenSandwich) {
+//       if (el == "name") continue;
+//       console.log(el + " : " + chickenSandwich[el]);
+//     }
+//   } else if (meat == "tuna") {
+//     for (let el in tunaSandwich) {
+//       if (el == "name") continue;
+//       console.log(el + " : " + tunaSandwich[el]);
+//     }
+//   } else if (meat == "gluten free") {
+//   for (let el in glutenFreeSandwich) {
+//     if (el == "name") continue;
+//     console.log(el + " : " + glutenFreeSandwich[el]);
+//   }
+// }
+// }
+
+// function setPrice(meat) {
+//   if (meat == "chicken") {
+//     console.log(`Price for your order is: $${price * 0.5}`);
+//   } else if (meat == "tuna") {
+//     console.log(`Price for your order is: $${price * 2}`);
+//   } else {
+//     console.log(`Price for your order is: $${price * 2.5}`);
+//   }
+// }
+
+// let price = 5;
+// let meat = "gluten free";
+
+// chooseIngredients(meat);
+// setPrice(meat);
